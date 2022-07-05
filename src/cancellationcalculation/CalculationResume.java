@@ -9,6 +9,7 @@ public class CalculationResume {
     private double planPrice;
     private double dayValue;
     private double valueUtilized;
+    private double valueFine;
     private double valueReturned;
     private double medicalCertificate;
     private long diffDate;
@@ -85,6 +86,14 @@ public class CalculationResume {
         this.dayValue = dayValue;
     }
 
+    public double getValueFine() {
+        return valueFine;
+    }
+
+    public void setValueFine(double valueFine) {
+        this.valueFine = valueFine;
+    }
+
     public void subtrationDate(Date initialDate, Date finalDate, double medicalCertificate) {
         this.setInitialDate(initialDate);
         this.setFinalDate(finalDate);
@@ -101,14 +110,17 @@ public class CalculationResume {
     }
     
     public void valueUtilized() {
-        
         this.setValueUtilized(this.getDayValue() * this.getDiffDate());
+    }
+    
+    public void returnedFine() {
+        this.setValueFine((this.getPlanPrice() - this.getValueUtilized())*0.1);
     }
     
     public void returnedValue (double monthPrice, double planPrice) {
         this.setMonthPrice(monthPrice);
         this.setPlanPrice(planPrice);
         
-        this.setValueReturned((this.getPlanPrice() - this.getValueUtilized()) - ((this.getPlanPrice() - this.getValueUtilized())*0.1));
+        this.setValueReturned((this.getPlanPrice() - this.getValueUtilized()) - this.getValueFine());
     }    
 }

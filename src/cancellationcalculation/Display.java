@@ -46,13 +46,16 @@ public class Display extends javax.swing.JFrame {
         clear = new javax.swing.JButton();
         text5 = new javax.swing.JLabel();
         campValue5 = new javax.swing.JTextField();
+        textPara7 = new javax.swing.JLabel();
+        returnedFine = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Usina do Corpo");
         setAlwaysOnTop(true);
-        setMaximumSize(new java.awt.Dimension(595, 490));
-        setMinimumSize(new java.awt.Dimension(595, 490));
-        setPreferredSize(new java.awt.Dimension(595, 490));
+        setMaximumSize(new java.awt.Dimension(595, 550));
+        setMinimumSize(new java.awt.Dimension(595, 550));
+        setPreferredSize(new java.awt.Dimension(595, 550));
+        setResizable(false);
 
         title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         title.setForeground(new java.awt.Color(255, 51, 0));
@@ -185,6 +188,18 @@ public class Display extends javax.swing.JFrame {
             }
         });
 
+        textPara7.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        textPara7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        textPara7.setText("VALOR DA MULTA");
+
+        returnedFine.setBackground(new java.awt.Color(255, 51, 0));
+        returnedFine.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        returnedFine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                returnedFineActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -219,25 +234,35 @@ public class Display extends javax.swing.JFrame {
                             .addComponent(campValue2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
-                .addGap(137, 137, 137)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(189, 189, 189)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(textPara3)
-                            .addComponent(textPara4)
-                            .addComponent(textPara5)
-                            .addComponent(textPara6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(result)
+                                .addGap(18, 18, 18)
+                                .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(textPara3)
+                                    .addComponent(textPara4)
+                                    .addComponent(textPara6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(utilizedDays, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dayValue, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(valueUtilized, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(137, 137, 137)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(returnedValue, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(utilizedDays, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dayValue, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(valueUtilized, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(result)
-                        .addGap(18, 18, 18)
-                        .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(textPara5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(returnedValue, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(textPara7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(returnedFine, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -276,13 +301,17 @@ public class Display extends javax.swing.JFrame {
                     .addComponent(valueUtilized, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textPara7)
+                    .addComponent(returnedFine, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textPara5)
                     .addComponent(returnedValue, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(1342, 1342, 1342))
+                .addGap(1303, 1303, 1303))
         );
 
         pack();
@@ -339,12 +368,14 @@ public class Display extends javax.swing.JFrame {
             calculation.returnedValue(monthPrice, planPrice);
             calculation.dayValue(monthPrice);
             calculation.valueUtilized();
+            calculation.returnedFine();
             calculation.returnedValue(monthPrice, planPrice);
  
             
             dayValue.setText(String.valueOf(decimalFormat.format(calculation.getDayValue())));
             utilizedDays.setText(String.valueOf(calculation.getDiffDate()));
             valueUtilized.setText(String.valueOf(decimalFormat.format(calculation.getValueUtilized())));
+            returnedFine.setText(String.valueOf(decimalFormat.format(calculation.getValueFine())));
             returnedValue.setText(String.valueOf(decimalFormat.format(calculation.getValueReturned())));
             
         } catch (ParseException ex) {
@@ -356,6 +387,7 @@ public class Display extends javax.swing.JFrame {
         dayValue.setText(String.valueOf(""));
         utilizedDays.setText(String.valueOf(""));
         valueUtilized.setText(String.valueOf(""));
+        returnedFine.setText(String.valueOf(""));
         returnedValue.setText(String.valueOf(""));
         campValue1.setText(String.valueOf(""));
         campValue2.setText(String.valueOf(""));
@@ -367,6 +399,10 @@ public class Display extends javax.swing.JFrame {
     private void campValue5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campValue5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campValue5ActionPerformed
+
+    private void returnedFineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnedFineActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_returnedFineActionPerformed
 
     /**
      * @param args the command line arguments
@@ -412,6 +448,7 @@ public class Display extends javax.swing.JFrame {
     private javax.swing.JButton clear;
     private javax.swing.JTextField dayValue;
     private javax.swing.JButton result;
+    private javax.swing.JTextField returnedFine;
     private javax.swing.JTextField returnedValue;
     private javax.swing.JLabel text1;
     private javax.swing.JLabel text2;
@@ -422,6 +459,7 @@ public class Display extends javax.swing.JFrame {
     private javax.swing.JLabel textPara4;
     private javax.swing.JLabel textPara5;
     private javax.swing.JLabel textPara6;
+    private javax.swing.JLabel textPara7;
     private javax.swing.JLabel title;
     private javax.swing.JTextField utilizedDays;
     private javax.swing.JTextField valueUtilized;
