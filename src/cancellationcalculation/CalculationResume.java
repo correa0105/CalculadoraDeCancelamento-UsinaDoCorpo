@@ -113,7 +113,8 @@ public class CalculationResume {
         this.setValueUtilized(this.getDayValue() * this.getDiffDate());
     }
     
-    public void returnedFine() {
+    public void returnedFine(double planPrice) {
+        this.setPlanPrice(planPrice);
         this.setValueFine((this.getPlanPrice() - this.getValueUtilized())*0.1);
     }
     
