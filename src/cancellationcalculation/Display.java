@@ -45,9 +45,11 @@ public class Display extends javax.swing.JFrame {
         result = new javax.swing.JButton();
         clear = new javax.swing.JButton();
         text5 = new javax.swing.JLabel();
-        campValue5 = new javax.swing.JTextField();
+        campValue6 = new javax.swing.JTextField();
         textPara7 = new javax.swing.JLabel();
         returnedFine = new javax.swing.JTextField();
+        campValue5 = new javax.swing.JTextField();
+        text6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Usina do Corpo");
@@ -179,11 +181,11 @@ public class Display extends javax.swing.JFrame {
         text5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         text5.setText("ATESTADO (SE TIVER):");
 
-        campValue5.setBackground(new java.awt.Color(204, 204, 204));
-        campValue5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        campValue5.addActionListener(new java.awt.event.ActionListener() {
+        campValue6.setBackground(new java.awt.Color(204, 204, 204));
+        campValue6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        campValue6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                campValue5ActionPerformed(evt);
+                campValue6ActionPerformed(evt);
             }
         });
 
@@ -199,21 +201,25 @@ public class Display extends javax.swing.JFrame {
             }
         });
 
+        campValue5.setBackground(new java.awt.Color(204, 204, 204));
+        campValue5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        campValue5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campValue5ActionPerformed(evt);
+            }
+        });
+
+        text6.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        text6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        text6.setText("PORCENTUAL");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(text5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campValue5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addComponent(text3)
@@ -230,32 +236,46 @@ public class Display extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(text2)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(campValue2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(campValue2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(text5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campValue5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(text6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campValue6, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(189, 189, 189)
-                        .addComponent(result)
-                        .addGap(18, 18, 18)
-                        .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(textPara3)
-                            .addComponent(textPara4)
-                            .addComponent(textPara6)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textPara5)
-                                .addComponent(textPara7, javax.swing.GroupLayout.Alignment.TRAILING)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(dayValue)
-                            .addComponent(utilizedDays)
-                            .addComponent(valueUtilized)
-                            .addComponent(returnedFine)
-                            .addComponent(returnedValue, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(189, 189, 189)
+                                .addComponent(result)
+                                .addGap(18, 18, 18)
+                                .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(113, 113, 113)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(textPara3)
+                                    .addComponent(textPara4)
+                                    .addComponent(textPara6)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(textPara5)
+                                        .addComponent(textPara7, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(dayValue)
+                                    .addComponent(utilizedDays)
+                                    .addComponent(valueUtilized)
+                                    .addComponent(returnedFine)
+                                    .addComponent(returnedValue, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,8 +296,11 @@ public class Display extends javax.swing.JFrame {
                     .addComponent(campValue3, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text5, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
-                    .addComponent(campValue5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campValue6, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(text5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(campValue5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -358,11 +381,12 @@ public class Display extends javax.swing.JFrame {
             double monthPrice = Double.parseDouble(campValue3.getText().replace("," , "."));
             double planPrice = Double.parseDouble(campValue4.getText().replace("," , "."));
             double medicalCertificate = Double.parseDouble(campValue5.getText().replace("," , "."));
+            double fine = Double.parseDouble(campValue6.getText().replace("," , "."));
             
             calculation.subtrationDate(initialDate, finalDate, medicalCertificate);
             calculation.dayValue(monthPrice);
             calculation.valueUtilized();
-            calculation.returnedFine(planPrice);
+            calculation.returnedFine(planPrice, fine);
             calculation.returnedValue(monthPrice, planPrice);
  
             
@@ -388,15 +412,20 @@ public class Display extends javax.swing.JFrame {
         campValue3.setText(String.valueOf(""));
         campValue4.setText(String.valueOf(""));
         campValue5.setText(String.valueOf("0"));
+        campValue6.setText(String.valueOf(""));
     }//GEN-LAST:event_clearActionPerformed
 
-    private void campValue5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campValue5ActionPerformed
+    private void campValue6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campValue6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_campValue5ActionPerformed
+    }//GEN-LAST:event_campValue6ActionPerformed
 
     private void returnedFineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnedFineActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_returnedFineActionPerformed
+
+    private void campValue5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campValue5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campValue5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -439,6 +468,7 @@ public class Display extends javax.swing.JFrame {
     private javax.swing.JTextField campValue3;
     private javax.swing.JTextField campValue4;
     private javax.swing.JTextField campValue5;
+    private javax.swing.JTextField campValue6;
     private javax.swing.JButton clear;
     private javax.swing.JTextField dayValue;
     private javax.swing.JButton result;
@@ -449,6 +479,7 @@ public class Display extends javax.swing.JFrame {
     private javax.swing.JLabel text3;
     private javax.swing.JLabel text4;
     private javax.swing.JLabel text5;
+    private javax.swing.JLabel text6;
     private javax.swing.JLabel textPara3;
     private javax.swing.JLabel textPara4;
     private javax.swing.JLabel textPara5;

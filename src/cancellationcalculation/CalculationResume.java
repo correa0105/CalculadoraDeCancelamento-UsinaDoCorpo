@@ -113,9 +113,10 @@ public class CalculationResume {
         this.setValueUtilized(this.getDayValue() * this.getDiffDate());
     }
     
-    public void returnedFine(double planPrice) {
+    public void returnedFine(double planPrice, double valueFine) {
         this.setPlanPrice(planPrice);
-        this.setValueFine((this.getPlanPrice() - this.getValueUtilized())*0.1);
+        this.setValueFine(valueFine / 100);
+        this.setValueFine((this.getPlanPrice() - this.getValueUtilized())* this.getValueFine());
     }
     
     public void returnedValue (double monthPrice, double planPrice) {
