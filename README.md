@@ -8,7 +8,7 @@
 
 # ☕ Descrição do Projeto
 
-Projeto feito para a empresa onde eu trabalho, o software recebe os parametros do cliente para cancelamento e realiza o calculo.
+Projeto feito para o escritório da empresa onde eu trabalho, o software recebe os parametros do cliente para cancelamento e realiza o calculo.
 
 ## 🤝 Autor
 
