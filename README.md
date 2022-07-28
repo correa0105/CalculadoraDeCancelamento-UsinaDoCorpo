@@ -6,6 +6,8 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/correa0105/CalculadoraDeCancelamento-UsinaDoCorpo?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/correa0105/CalculadoraDeCancelamento-UsinaDoCorpo?style=for-the-badge)
 
+<img src="./src/exemplo.JPG" alt="Exemplo do Projeto">
+
 # ☕ Descrição do Projeto
 
 Projeto feito para o escritório da empresa onde eu trabalho, o software recebe os parametros do cliente para cancelamento e realiza o calculo.
